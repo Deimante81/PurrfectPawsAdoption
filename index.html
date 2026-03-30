@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Discover cat adoption, fun cat facts and interactive quizzes at PurrfectPawsAdoption. Find your perfect feline companion today.">
+	<meta name="keywords" content="adopt a cat, cat adoption near me, kittens for adoptions, rescue cats, adopt pets">
+	<meta name="author" content="PurrfectPawsAdoption">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Home | PurrfectPawsAdoption </title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+	<h1>PurrfectPawsAdoption</h1>
+	<ul>
+		<li><a href="ndex.html">Home</a></li>
+		<li><a href="quiz.html">Cat Quiz</a></li>
+		<li><a href="adopt.html">Adopt a Kitty</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+<div class="hero-fact-container">
+    <section class="hero">
+        <h2>Find Your Purrfect Companion</h2>
+        <p>Adopt, explore and fall in love with your new best friend.</p>
+
+     <div class="button-fact-wrapper">
+     	<button id="adoptBtn" class="card-btn">Adopt Now</button>
+        <button id="factBtn" class="card-btn">Cat Fact !</button>
+     </div>
+        <p id="fact"><i>"Click the button to see a fun cat fact!"</i></p>
+    </section>
+</div>
+
+<section class="cards">
+	<div class="card">
+		<img src="images/catwglasses.jpg" alt="kitten wearing glasses looking curious">
+		<h3>Take the Quiz</h3>
+		<p> Find out which one of our kitties matches your personality best. </p>
+		<a href="quiz.html" class="card-btn">Start Quiz</a>
+	</div>
+
+<div class="card">
+	<img src="images/whitecat.jpg" alt="Adorable white cat with the clover">
+	<h3>Find your future companion</h3>
+	<p>Meet cats looking for loving homes</p>
+	<a href="adopt.html" class="card-btn">View Cats</a>
+</div>
+
+<div class="card">
+	<img src="images/tiredcat.jpg" alt="Cute cat looking sleepy">
+	<h3>How adoption works </h3>
+	<p>Learn how easy it is to adopt your new best friend.</p>
+	<a href="contact.html" class="card-btn">Learn More</a>
+</div>
+</section>
+
+<section class="about-us">
+	<h2>Our Mission</h2>
+	<p>At <strong>PurrfectPawsAdoption</strong>, our mission is to connect loving people with cats in need of a home. We believe every cat deserves a safe, happy life where they are loved and cared for.</p>
+
+    <p>We strive to make the adoption process seamless, providing detailed profiles, photos, and personality insights for every cat. Our goal is to help you find the perfect companion who matches your lifestyle and personality.</p>
+
+    <p>Beyond adoptions, we are passionate about educating the community on responsible cat ownership. We provide tips, fun facts, and interactive resources to help owners understand their furry friends better.</p>
+
+    <p>Our platform also fosters a sense of community for cat lovers. Through quizzes, galleries, and shared experiences, we aim to bring joy and connection to everyone who visits.</p>
+
+    <p>Ultimately, our mission is to make the world a better place for cats and their humans, one adoption at a time. By connecting hearts, sharing knowledge, and celebrating the joys of cat companionship, we create lasting bonds that enrich both lives.</p>
+</section>
+
+<section class="video-section">
+	<h2>Cat Care Tips</h2>
+	<p>Watch a quick video on tips and tricks when you bring your loving feline home</p>
+
+<div class="video-container">
+ <iframe width="560" height="315" 
+ src="https://www.youtube.com/embed/2Ex99RuKqAw" 
+ title="Cat care tips video" 
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+ referrerpolicy="strict-origin-when-cross-origin" 
+ allowfullscreen>
+ </iframe>
+</div>
+</section>
+
+<section class="testimonials">
+	<h2>Happy Adopters</h2>
+
+<div class="testimonial-row">
+<div class="testimonial">
+	<p>"I adopted Daisy and she completely changed my life."</p>
+	<div class="stars">★★★★★</div>
+	<h3> - Sarah M.</h3>
+</div>
+
+<div class="testimonial">
+	<p>"The process was so smooth and I found Mickey instantly."</p>
+	<div class="stars">★★★★★</div>
+	<h3> - James K.</h3>
+</div>
+
+<div class="testimonial">
+	<p>"What a wonderful experience would recommened!"</p>
+	<div class="stars">★★★★☆</div>
+	<h3> - Rachel N.</h3>
+</div>
+</div>
+</section>
+
+
+<footer>
+	<p style="text-align:center;">&copy; 2026 PurrfectPawsAdoption | Cat Adoption. All rights reserved. </p>
+</footer>
+
+<script>
+document.getElementById("factBtn").addEventListener("click", () => {
+    const factText = document.getElementById("fact");
+    
+    fetch('https://catfact.ninja/fact')
+      .then(response => response.json())
+      .then(data => {
+          factText.innerText = data.fact;
+      })
+      .catch(err => {
+          factText.innerText = "Oops! Couldn't fetch a cat fact.";
+          console.error(err);
+      });
+});
+
+document.getElementById("adoptBtn").addEventListener("click", () => {
+    window.location.href = "adopt.html";
+});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
