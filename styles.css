@@ -1,0 +1,683 @@
+
+/* General Body */
+*{
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+
+body {
+	margin:0;
+	font-family: "Poppins", sans-serif;
+	background-color:#cdd4b8;
+	color:#272b1a;
+	line-height: 1.5;
+}
+
+/* Navigation Bar */
+.navbar {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:center;
+	padding:15px 5%;
+	background-color:#424a2b;
+	color: white;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+	list-style: none;
+	display: flex;
+	flex-wrap:wrap;
+	gap:30px;
+}
+
+.navbar a {
+	color: white;
+	text-decoration: none;
+	font-weight:700;
+	transition: color 0.3s;
+}
+
+.navbar a:hover {
+	color: #A1693A;
+	text-decoration:underline;
+}
+
+/* Hero + Fact container */
+.hero-fact-container {
+	position: relative;
+	background-image: url("images/header.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* Overlay */
+.hero-fact-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items:center;
+  gap: 10px;
+  padding: 40px 20px;
+  color:white; 
+}
+
+
+.button-fact-wrapper {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+#fact {
+  font-size: 22px;
+  font-family: 'Dancing Script', cursive;
+  color:white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.hero h2 {
+	font-size: 28px;
+}
+
+.hero p {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+/* Cards Section */
+.cards {
+	display: flex;
+	justify-content: space-around;
+	gap: 30px;
+	padding: 40px 20px;
+}
+
+.card {
+	background-color:#73804e;
+	padding: 20px;
+	width: 30%;
+	border-radius: 15px;
+	text-align: center;
+	box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-8px);
+}
+
+.card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-bottom: 15px;
+}
+
+/* Card buttons */
+.card-btn,
+button.card-btn{
+	display: inline-block;
+	padding: 10px 15px;
+	background-color:#9ca879;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	border:none;
+	appearance:none;
+	transition: background 0.3s;
+}
+
+.card-btn:hover {
+	background-color: #272b1a;
+}
+
+
+/* About Us */
+.about-us{
+	background-color:#afb59e;
+	padding:30px 20px;
+	text-align:center;
+	line-height:1.8;
+	margin:0 auto;
+}
+
+.about-us h2{
+	font-size:28px;
+	color:white;
+	margin-bottom:20px;
+}
+
+.about-us p{
+	font-size:16px;
+	margin-bottom:20px;
+	color:white;
+}
+
+/* The testimonial section */
+.testimonials{
+	background-color:#858a76;
+	padding:30px 20px;
+	text-align:center;
+	color:white;
+}
+
+.testimonials h2{
+	font-size:28px;
+	margin-bottom:40px;
+}
+
+.testimonial{
+	max-width:600px;
+	margin:0 auto 40px;
+}
+
+.testimonial p{
+	font-size:16px;
+	font-style:italic;
+	margin-bottom:10px;
+}
+
+.stars{
+	color:gold;
+	font-size:14px;
+}
+
+.testimonial h3{
+	font-size:14px;
+	font-weight:normal;
+	opacity:0.8;
+}
+
+.testimonial:not(:last-child){
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	padding-bottom:30px;
+}
+
+.testimonial-row{
+	display:flex;
+	justify-content:center;
+	gap:10px;
+	flex-wrap:wrap;
+}
+
+/*Adopt a Kitty*/
+.adopt-header{
+	text-align:center;
+	padding:20px 20px 40px;
+	color:#272b1a;
+}
+
+.adopt-header h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.adopt-header p {
+  font-size: 18px;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Adopt page */
+.adopt-cats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 20px;
+  background-color:#bbc793;
+}
+
+.adopt-cat-container {
+  display:grid;
+  grid-template-columns:repeat(3, 280px);
+  gap: 30px;
+  padding:20px;
+  justify-content: center;
+  width: 100%;
+  margin-bottom:80px;
+}
+
+.cat-card {
+	position:relative;
+  background-color: #73804e;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition:all 0.3s ease;
+  cursor: pointer;
+}
+
+.cat-card:hover{
+	transform: translateY(-8px);
+	background-color:#9ca879;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.cat-card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.cat-card p {
+    margin: 4px 0;
+    color: white;
+    font-size: 14px;
+}
+
+/* Buttons inside cards */
+.cat-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color:#272b1a;
+    color: white;
+    cursor: pointer;
+    transition:0.3s;
+}
+
+.cat-card button:hover {
+    background-color:#646b4b;
+}
+
+.cat-card:hover {
+    background-color: #9ca879;
+    transform: scale(1.05);
+}
+
+.status-badge{
+	position:absolute;
+	top:20px;
+	right:20px;
+	color:white;
+	font-size:12px;
+	font-weight:bold;
+	padding:6px 12px;
+	border-radius:50px;
+	box-shadow:0 2px 5px rgba(0,0,0,0.2);
+	z-index:2;
+}
+
+.cat-card[data-status="available"] .status-badge{
+	background-color:#4caf50;
+}
+
+.cat-card[data-status="adopted"] .status-badge{
+	background-color:#9e9e9e;
+}
+
+.cat-card[data-status="pending"] .status-badge{
+	background-color:#ffc107; 
+}
+
+.filters{
+	display:flex;
+	flex-direction:column;
+	gap:30px;
+	align-items:center;
+	justify-content:center;
+	background-color:#73804e;
+	padding:40px;
+	border-radius:15px;
+	box-shadow:0 4px 15px rgba(0,0,0,0.2);
+	margin:20px auto;
+	color:white;
+}
+
+.filters h2{
+	font-size:18px;
+	color:white;
+	border-bottom:none;
+	text-align:center;
+	padding-bottom:5px;
+
+}
+.filters .filters-row{
+	display:flex;
+	gap:15px;
+	flex-wrap:wrap;
+	justify-content:center;
+	width:100%;
+}
+
+.filters label{
+	font-weight:600;
+}
+
+.filters select{
+	padding:8px 12px;
+	border-radius:6px;
+	border:none;
+	outline:none;
+	font-size:14px;
+	width:200px;
+}
+
+.adopt-search-btn{
+	padding:10px 15px;
+	border-radius:5px;
+	border:none;
+	background-color:#9ca879;
+	color:white;
+	cursor:pointer;
+	font-weight:bold;
+	transition:background-color 0.3s ease;
+}
+
+.adopt-search-btn:hover{
+	background-color:#272b1a;
+}
+
+.adopt-clear-btn {
+	padding:10px 15px;
+	border-radius:5px;
+	border:none;
+	background-color:#9ca879;
+	color:white;
+	cursor:pointer;
+	font-weight:bold;
+	transition:background-color 0.3s ease;
+}
+
+.adopt-clear-btn:hover {
+    background-color:#272b1a;
+}
+
+/* Contact Page */
+.adoption-steps{
+	background-color:#afb59e;
+	padding:40px 20px;
+	text-align:center;
+}
+
+.adopion-steps h2{
+	color:white;
+	margin-bottom:30px;
+}
+
+.steps-container{
+	display:flex;
+	justify-content:center;
+	gap:20px;
+	flex-wrap:wrap;
+}
+
+.step{
+	background-color:#73804e;
+	color:white;
+	padding:20px;
+	border-radius:12px;
+	width:200px;
+}
+
+.step h3{
+	margin-bottom:10px;
+}
+
+.contact-header{
+	text-align:center;
+	padding:30px 20px 40px;
+	color:#272b1a;
+}
+
+.contact-header h1{
+	font-size:28px;
+	margin-bottom:15px;
+}
+
+.contact-header p{
+	font-size:18px;
+}
+
+.contact-form-section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 80px 40px;
+	background-color: #afb59e;
+}
+
+.contact-form-section h2{
+	text-align: center;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.contact-form{
+	display:flex;
+	flex-direction: column;
+	gap: 15px;
+	width: 100%;
+	max-width: 800px;
+	background-color: #767a6a;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+	color: white;
+	margin: 0 auto;
+}
+
+.contact-form label{
+	font-weight:bold;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-form input, .contact-form select{
+	height:40px;
+}
+
+.contact-submit-btn{
+	padding:12px 20px;
+	background-color:#9ca879;
+	color:white;
+	border:none;
+	border-radius:5px;
+	font-weight:bold;
+	cursor:pointer;
+	transition:background-color 0.3s ease;
+}
+
+.contact-submit-btn:hover{
+	background-color:#272b1a;
+}
+
+/* Quiz Header */
+.quiz-header{
+	text-align:center;
+	padding:40px 20px 10px;
+	color:#272b1a;
+}
+
+.quiz-header h1{
+	font-size:36px;
+	margin-bottom:10px;
+}
+
+.quiz-section{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding:10px 20px;
+}
+
+.quiz-form{
+	background-color:#afb59e;
+	padding:30px;
+	border-radius:15px;
+	width:100%;
+	color:white;
+	display:flex;
+	flex-direction:column;
+	gap:20px;
+}
+
+.quiz-question{
+	background-color:#9ca879;
+	padding:20px;
+	border-radius:12px;
+}
+
+.quiz-question h3{
+	margin-bottom:10px;
+}
+
+.quiz-question label{
+	display:block;
+	margin-bottom:8px;
+	cursor:pointer;
+}
+
+.quiz-btn{
+	padding:12px;
+	background-color:#9ca879;
+	border:none;
+	border-radius:6px;
+	color:white;
+	font-weight:bold;
+	cursor:pointer;
+	transition:0.3s;
+}
+
+.quiz-btn:hover{
+	background-color:#9ca879;
+}
+
+#quizResultBox{
+	margin-top:30px;
+	text-align:center;
+}
+
+#resultimages{
+	display:flex;
+	justify-content:center;
+	gap:15px;
+	margin-top:15px;
+}
+
+/* Video Section */
+.video-section{
+	text-align:center;
+	padding:40px 20px;
+	background-color:#cdd4b8;
+	color:white;
+
+}
+
+.video-container{
+	display:flex;
+	justify-content:center;
+	margin-top:20px;
+}
+
+.video-container iframe{
+	max-width:100%;
+	border-radius:12px;
+}
+
+
+/* Footer */
+footer {
+	text-align: center;
+	padding: 20px;
+	background-color:#272b1a;
+	color: white;
+	font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+	.cards, .adopt-cat-container {
+		grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+	}
+}
+
+@media (max-width: 768px) {
+	.navbar ul {
+		flex-direction: column;
+		gap: 10px;
+		text-align:center;
+	}
+
+	.card, .cat-card {
+		width: 90%;
+	}
+
+	.filters .filters-row {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.contact-form, .quiz-form {
+		width: 90%;
+	}
+}
+
+@media (max-width: 480px) {
+	.navbar h1 {
+		width: 100%;
+		text-align:center;
+		font-size: 1.5rem;
+	}
+
+	.filters select,
+	.adopt-search-btn,
+	.adopt-clear-btn {
+		width: 100%;
+	}
+
+	.contact-form, .quiz-form {
+		width: 100%;
+		padding: 15px;
+	}
+
+	.cat-card {
+		width: 100%;
+	}
+
+	.cards, .adopt-cat-container {
+		flex-direction: column;
+	}
+}
+
