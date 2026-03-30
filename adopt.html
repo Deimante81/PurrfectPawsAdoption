@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Browse cats available for adoption. Filter by age and gender to find your perfect match and give a cat a loving home.">
+	<meta name="keywords" content="adopt a cat, cat adoption near me, kittens for adoption, rescue cats, adopt pets">
+	<meta name="author" content="PurrfectPawsAdoption">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> Adopt a Cat | PurrfectPawsAdoption</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+	<h1>PurrfectPawsAdoption</h1>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="quiz.html">Cat Quiz</a></li>
+		<li><a href="adopt.html">Adopt a Kitty</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+
+<section class="adopt-header">
+	<h1> Adopt a Cat</h1>
+	<p> Meet the cats that are currently looking for their forever homes.</p>
+
+</section>
+
+<section class="filters">
+	<h2>Filter Cats by Age and Gender</h2>
+	<div class="filters-row">
+	<label>Age Group</label>
+	<select id="ageFilter">
+		<option value="all">All</option>
+		<option value="kitten">Kitten</option>
+		<option value="adult">Adult</option>
+		<option value="senior">Senior</option>
+	</select>
+
+	<label>Gender</label>
+	<select id="genderFilter">
+		<option value="all">All</option>
+		<option value="male">Male</option>
+		<option value="female">Female</option>
+	</select>
+
+	<label>Sort by Age</label>
+	<select id="sortAge">
+		<option value="none">None</option>
+		<option value="oldest">Oldest to Youngest</option>
+		<option value="youngest">Youngest to Oldest</option>
+	</select>
+
+<button class="adopt-search-btn" onclick="filterCats()">Search</button>
+<button class="adopt-clear-btn" onclick="clearFilters()">Clear</button>
+</div>
+</section>
+
+<section class="adopt-cats">
+	<div class="adopt-cat-container">
+
+		<div class="cat-card" data-age="3" data-agegroup="adult" data-gender="female" data-status="available">
+		<img src="images/june.jpg" alt="June, a 3 year old ginger cat available for adoption">
+		<span class="status-badge">available</span>
+		<h3>June</h3>
+		<p><strong>Age:</strong> 3 years</p>
+		<p><strong>Gender:</strong> Female</p>
+		<p>Playful and loves chasing feather toys.Big fan of sunny naps!</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="0.5" data-agegroup="kitten" data-gender="female" data-status="pending">
+		<img src="images/cleo.jpg" alt="Cleo, a 6 month old kitten looking for a loving home">
+		<span class="status-badge">pending</span>
+		<h3>Cleo</h3>
+		<p><strong>Age:</strong> 6 months</p>
+		<p><strong>Gender:</strong> Female</p>
+		<p>Sweet kitten who enjoys cuddles and exploring new places.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="1" data-agegroup="adult" data-gender="female" data-status="adopted">
+		<img src="images/luna.jpg" alt="Luna, a 1 year old cat currently adopted">
+		<span class="status-badge">adopted</span>
+		<h3>Luna</h3>
+		<p><strong>Age:</strong> 1 years</p>
+		<p><strong>Gender:</strong> Female</p>
+		<p>Curious and adventurous,Luna enjoys birdwatching by the window.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="0.5" data-agegroup="kitten" data-gender="male" data-status="available">
+		<img src="images/milo.jpg" alt="Milo, an energetic male kitten available for adoption">
+		<span class="status-badge">available</span>
+		<h3>Milo</h3>
+		<p><strong>Age:</strong> 6 months</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Energetic and silly,he loves to play with strings and chase his shadow.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="6" data-agegroup="senior" data-gender="female" data-status="available">
+		<img src="images/molly.jpg" alt="Molly, a calm 6 year old senior cat available for adoption">
+		<span class="status-badge">available</span>
+		<h3>Molly</h3>
+		<p><strong>Age:</strong> 6 years</p>
+		<p><strong>Gender:</strong> Female</p>
+		<p>Calm and affectionate,Molly loves gentle pets and quiet afternoons.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="3" data-agegroup="adult" data-gender="male" data-status="available">
+		<img src="images/mrmittens.jpg" alt="Mr Mittens, a gentle male cat looking for a loving home">
+		<span class="status-badge">available</span>
+		<h3>Mr Mittens</h3>
+		<p><strong>Age:</strong> 3 years</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Gentle giant,enjoys lounging and snuggles with his favourite humans.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="2" data-agegroup="adult" data-gender="female" data-status="pending">
+		<img src="images/pepper.jpg" alt="Pepper, a lively female cat pending adoption">
+		<span class="status-badge">pending</span>
+		<h3>Pepper</h3>
+		<p><strong>Age:</strong> 2 years</p>
+		<p><strong>Gender:</strong> Female</p>
+		<p>Lively and friendly,Pepper loves interactive play and treats.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="3" data-agegroup="adult" data-gender="female" data-status="available">
+		<img src="images/princess.jpg" alt="Princess, an affectionate female cat available for adoption">
+		<span class="status-badge">available</span>
+		<h3>Princess</h3>
+		<p><strong>Age:</strong> 3 years</p>
+		<p><strong>Gender:</strong> Female</p>
+		<p>Elegant and affectionate,enjoys quiet moments and cozy blankets.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="1" data-agegroup="adult" data-gender="male" data-status="available">
+		<img src="images/pumpkin.jpg" alt="Pumpkin, a playful male cat available for adoption">
+		<span class="status-badge">available</span>
+		<h3>Pumpkin</h3>
+		<p><strong>Age:</strong> 1 years</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Fun-loving and mischievous,always ready for a new adventure.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="3" data-agegroup="adult" data-gender="male" data-status="adopted">
+		<img src="images/shadow.jpg" alt="SHadow, a loyal male cat already adopted">
+		<span class="status-badge">adopted</span>
+		<h3>Shadow</h3>
+		<p><strong>Age:</strong> 3 years</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Loyal and sweet,likes curling up beside you during movie nights.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="5" data-agegroup="senior" data-gender="male" data-status="available">
+		<img src="images/simon.jpg" alt="Simon, a relaxed senior male looking for a loving home">
+		<span class="status-badge">available</span>
+		<h3>Simon</h3>
+		<p><strong>Age:</strong> 5 years</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Laid-back senior who enjoys being petted and watching the world.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="6" data-agegroup="senior" data-gender="male" data-status="pending">
+		<img src="images/sirwhiskers.jpg" alt="SirWhiskers, a curious male cat pending adoption">
+		<span class="status-badge">pending</span>
+		<h3>Sir Whiskers</h3>
+		<p><strong>Age:</strong> 6 years</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Curious and playful,loves attention and window birdwatching.</p>
+        <button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="0.8" data-agegroup="kitten" data-gender="male" data-status="available">
+		<img src="images/taco.jpg" alt="Taco, an adventurous kitten available for adoption">
+		<span class="status-badge">available</span>
+		<h3>Taco</h3>
+		<p><strong>Age:</strong> 8 months</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Tiny and adventurous,loves climbing and chasing toys.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+
+	<div class="cat-card" data-age="1" data-agegroup="adult" data-gender="male" data-status="available">
+		<img src="images/tank.jpg" alt="Tank, a friendly male cat available for a home">
+		<span class="status-badge">available</span>
+		<h3>Tank</h3>
+		<p><strong>Age:</strong> 1 years</p>
+		<p><strong>Gender:</strong> Male</p>
+		<p>Friendly and energetic,enjoys playtime and sunggle afterward.</p>
+		<button onclick="window.location.href='contact.html'">Adopt Me</button>
+	</div>
+</div>
+</section>
+
+<footer>
+    <p style="text-align:center;">&copy; 2026 PurrfectPawsAdoption | Cat Adoption. All rights reserved. </p>
+</footer>
+
+<script>
+function filterCats() {
+  let ageGroup = document.getElementById("ageFilter").value;
+  let gender = document.getElementById("genderFilter").value;
+  let sortAge = document.getElementById("sortAge").value;
+
+  let container = document.querySelector(".adopt-cat-container");
+  let cats = Array.from(document.querySelectorAll(".cat-card"));
+
+  // 1. Filter cats first
+  let visibleCats = cats.filter(cat => {
+    let catAgeGroup = cat.dataset.agegroup;
+    let catGender = cat.dataset.gender;
+
+    let show = true;
+    if(ageGroup !== "all" && catAgeGroup !== ageGroup) show = false;
+    if(gender !== "all" && catGender !== gender) show = false;
+
+    cat.style.display = show ? "block" : "none";
+    return show;
+  });
+
+  // 2. Sort only visible cats
+  if(sortAge !== "none") {
+    visibleCats.sort((a, b) => {
+      let ageA = parseFloat(a.dataset.age);
+      let ageB = parseFloat(b.dataset.age);
+
+      if(sortAge === "oldest") return ageB - ageA;
+      if(sortAge === "youngest") return ageA - ageB;
+    });
+
+    // 3. Re-append sorted visible cats
+    visibleCats.forEach(cat => container.appendChild(cat));
+  }
+}
+
+function clearFilters() {
+    document.getElementById("ageFilter").value = "all";
+    document.getElementById("genderFilter").value = "all";
+    document.getElementById("sortAge").value = "none";
+
+    // Show all cats
+    let cats = document.querySelectorAll(".cat-card");
+    cats.forEach(cat => cat.style.display = "block");
+}
+
+</script>
+
+</body>
+</html>

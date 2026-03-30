@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Take our fun cat personality quiz to find your perfect feline match based on your lifestyle and preferences.">
+	<meta name="keywords" content="cat quiz, per personality quiz, which cat suits me, cat matching quiz, fun pet quiz">
+	<meta name="author" content="PurrfectPawsAdoption">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cat Personality Quiz | PurrfectPawsAdoption</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+	<h1>PurrfectPawsAdoption</h1>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="quiz.html">Cat Quiz</a></li>
+		<li><a href="adopt.html">Adopt a Kitty</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+
+<section class="quiz-header">
+	<h2>Find Your Purrfect Match</h2>
+	<p>Answer a few questions to discover which cat personality matches you!</p>
+</section>
+
+<section class="quiz-section">
+	<form id="quizForm" class="quiz-form">
+
+<div class="quiz-question">
+	<h3>1. How active is your lifestyle?</h3>
+	
+	<label><input type="radio" name="q1" value="milo taco pepper pumkin"> Very active</label>
+	<label><input type="radio" name="q1" value="cleo tank mrmittens"> Moderately active</label>
+	<label><input type="radio" name="q1" value="molly june simon luna"> Relaxed and calm</label>
+	<label><input type="radio" name="q1" value="shadow sirwhiskers princess"> Quiet and low-energy</label>
+</div>
+
+<div class="quiz-question">
+	<h3>2. What is your home like?</h3>
+
+	<label><input type="radio" name="q2" value="milo taco pepper pumpkin"> Busy and full of energy</label>
+	<label><input type="radio" name="q2" value="cleo tank mrmittens"> Balanced and social</label>
+	<label><input type="radio" name="q2" value="molly june simon luna"> Peaceful and calm</label>
+	<label><input type="radio" name="q2" value="shadow sirwhiskers princess"> Quiet and private</label>
+</div>
+
+<div class="quiz-question">
+	<h3>3. How much time can you spend with your pet?</h3>
+
+	<label><input type="radio" name="q3" value="milo taco pepper pumpkin"> Lots of time every day</label>
+	<label><input type="radio" name="q3" value="cleo tank mrmittens"> A good amount of time</label>
+	<label><input type="radio" name="q3" value="molly june simon luna"> Some quiet time together</label>
+	<label><input type="radio" name="q3" value="shadow sirwhiskers princess"> Limited time</label>
+</div>
+
+<div class="quiz-question">
+	<h3>4. How would you desribe yourself?</h3>
+
+	<label><input type="radio" name="q4" value="milo taco pepper pumpkin"> Energetic and playful</label>
+	<label><input type="radio" name="q4" value="cleo tank mrmittens"> Friendly and adaptable</label>
+	<label><input type="radio" name="q4" value="molly june simon luna"> Calm and affectionate</label>
+	<label><input type="radio" name="q4" value="shadow sirwhiskers princess"> Independent and reserved</label>
+</div>
+
+<div class="quiz-question">
+	<h3>5. What kind of pet do you want?</h3>
+
+	<label><input type="radio" name="q5" value="milo taco pepper pumpkin"> Playful and energetic</label>
+	<label><input type="radio" name="q5" value="cleo tank mrmittens"> Friendly and easygoing</label>
+	<label><input type="radio" name="q5" value="molly june simon luna"> Cuddly and gentle</label>
+	<label><input type="radio" name="q5" value="shadow sirwhiskers princess"> Independent and low-maintenance</label>
+</div>
+
+<div class="quiz-question">
+	<h3>6. What kind of environment do you prefer?</h3>
+
+	<label><input type="radio" name="q6" value="milo taco pepper pumpkin"> Lively and busy</label>
+	<label><input type="radio" name="q6" value="cleo tank mrmittens"> Balanced</label>
+	<label><input type="radio" name="q6" value="molly june simon luna"> Quiet and cozy</label>
+	<label><input type="radio" name="q6" value="shadow sirwhiskers princess"> Very quiet</label>
+</div>
+
+<div class="quiz-question">
+	<h3>7. How social are you?</h3>
+
+	<label><input type="radio" name="q7" value="milo taco pepper pumpkin"> Very social</label>
+	<label><input type="radio" name="q7" value="cleo tank mrmittens"> Friendly but balanced</label>
+	<label><input type="radio" name="q7" value="molly june simon luna"> Prefer small groups</label>
+	<label><input type="radio" name="q7" value="shadow sirwhiskers princess"> Prefer being alone</label>
+</div>
+
+<div class="quiz-question">
+	<h3>8. What's your daily routine like?</h3>
+
+	<label><input type="radio" name="q8" value="milo taco pepper pumpkin"> Busy and active</label>
+	<label><input type="radio" name="q8" value="cleo tank mrmittens"> Friendly but balanced</label>
+	<label><input type="radio" name="q8" value="molly june simon luna"> Calm and predictable</label>
+	<label><input type="radio" name="q8" value="shadow sirwhiskers princess"> Quiet and independent</label>
+</div>
+
+<button type="submit" class="quiz-btn">See Result</button>
+  </form>
+
+ <div id="quizResultBox">
+  <p id="quizResult"></p>
+  <div id="resultimages"></div>
+</div>
+
+</section>
+
+<footer>
+  <p style="text-align:center;">&copy; 2026 PurrfectPawsAdoption | Cat Adoption. All rights reserved.</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const quizForm = document.getElementById("quizForm");
+
+quizForm.addEventListener("submit", function(e) {
+e.preventDefault();
+
+const selectedAnswers = document.querySelectorAll('input[type="radio"]:checked');
+
+if (selectedAnswers.length < 8) {
+alert("Please answer all questions!");
+return;
+}
+
+let scores = {
+luna: 0, milo: 0, shadow: 0, cleo: 0, june: 0, molly: 0,
+mrmittens: 0, pepper: 0, princess: 0, pumpkin: 0, simon: 0,
+sirwhiskers: 0, taco: 0, tank: 0
+};
+
+selectedAnswers.forEach(answer => {
+const cats = answer.value.split(" "); 
+cats.forEach(cat => {
+scores[cat]++;
+});
+});
+
+const topCats = Object.entries(scores)
+.sort((a, b) => b[1] - a[1])
+.slice(0, 3);
+
+const resultText = document.getElementById("quizResult");
+const resultimages = document.getElementById("resultimages");
+
+resultText.innerHTML = "<strong>Your best matches:</strong><br>";
+resultimages.innerHTML = "";
+
+topCats.forEach(cat => {
+const catName = cat[0];
+
+resultText.innerHTML += `• ${formatName(catName)}<br>`;
+
+const img = document.createElement("img");
+  img.src = `images/${catName}.jpg`;
+  img.alt = `${formatName(catName)} cat match result from quiz`;
+  img.style.width = "120px";
+  img.style.borderRadius = "10px";
+
+  resultimages.appendChild(img);
+});
+});
+
+function formatName(name) {
+  if (name === "mrmittens") return "Mr Mittens";
+  if (name === "sirwhiskers") return "Sir Whiskers";
+  return name.charAt(0).toUpperCase() + name.slice(1);
+  }
+});
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
